@@ -1,0 +1,30 @@
+﻿@model projectFinal.Models.product
+
+@{
+    ViewBag.Title = "buy";
+}
+
+<h2>buy</h2>
+
+<fieldset>
+    <legend>Total Amount</legend>
+
+   
+<form action="/Home/checkOut">
+   
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.price)
+    </div>
+
+    <div class="controls">
+     <button type="submit" class="btn block">check out</button>
+      </div>
+    		 
+    </form>
+   
+</fieldset>
+
+

@@ -1,0 +1,63 @@
+﻿@model projectFinal.Models.product
+
+@{
+    ViewBag.Title = "ProductDetail";
+}
+
+<h2>ProductDetail</h2>
+<form  action="/Home/addToCart/@Model.prodid" >
+<fieldset>
+    <legend>product</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.prodid)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.prodid)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.prodname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.prodname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.price)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.price)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.quantity)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.quantity)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.available)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.available)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.category)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.category)
+    </div>
+  
+    <div class="controls">
+			  <button type="submit" class="btn block">add to cart</button>
+			  </div>
+</fieldset>
+      </form>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+       @Html.ActionLink("Add To Cart", "addToCart")
+</p>
